@@ -40,6 +40,7 @@ public class DoublyLinkedList {
             prev.setNextNode(newNode);
             newNode.setPrevNode(prev);
             newNode.setNextNode(null);
+            header.setLastNode(newNode);
         }
         // 새로운 노드가 중간 위치에 삽입되는 경우
         else {
@@ -52,5 +53,47 @@ public class DoublyLinkedList {
             // 새 노드의 다음노드의 이전노드에 새 노드를 설정
             newNode.getNextNode().setPrevNode(newNode);
         }
+    }
+
+    // 리스트에서 노드를 삭제하는 메서드
+    public Node remove(int data) {
+        // 첫번째 노드부터 검색
+        Node current = header.getFirstNode();
+        Node prev = null;
+
+        while (current != null && data != current.getData()) {
+            prev = current;
+            current = current.getNextNode();
+        }
+
+        // 첫번째 노드를 삭제할 경우
+        if (header.getFirstNode() == current) {
+            header.setFirstNode(current.getNextNode());
+        }
+        // 마지막 노드를 삭제할 경우
+        else if (current.getNextNode() == null) {
+            prev.setNextNode(null);
+            header.setLastNode(prev);
+        }
+        // 중간 노드를 삭제할 경우
+        else {
+            prev.setNextNode(current.getNextNode());
+            current.getNextNode().setPrevNode(prev);
+        }
+        return current;
+    }
+
+    public String toString() {
+        String msg = "[ ";
+        Node current = header.getFirstNode();
+        while (current != null) {
+            msg += current.getData();
+            current = current.getNextNode();
+            if (current != null) {
+                msg += ", ";
+            }
+        }
+        msg += " ]";
+        return msg;
     }
 }
