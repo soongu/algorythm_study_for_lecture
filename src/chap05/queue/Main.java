@@ -1,12 +1,10 @@
 package chap05.queue;
 
-import chap05.stack.Stack;
-
 public class Main {
 
     public static void main(String[] args) {
 
-        Queue queue = new Queue(); // 새로운 스택 생성
+        Queue<Number> queue = new Queue<Number>(); // 새로운 스택 생성
 
         // 스택에 자료 넣기
         for (int i = 1; i <= 5; i++) {

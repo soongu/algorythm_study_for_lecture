@@ -1,6 +1,6 @@
 package chap05.queue;
 
-public class Queue {
+public class Queue<I extends Number> {
 
     private QueueNode front;
     private QueueNode rear;
