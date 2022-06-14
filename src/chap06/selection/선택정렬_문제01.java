@@ -4,7 +4,6 @@ import java.util.Scanner;
 
 // 백준 1427
 public class 선택정렬_문제01 {
-
     public static void main(String[] args) {
 
         Scanner sc = new Scanner(System.in);
@@ -12,7 +11,7 @@ public class 선택정렬_문제01 {
 
         int[] A = new int[str.length()];
         for (int i = 0; i < str.length(); i++) {
-            A[i] = Integer.parseInt(str.substring(i, i + 1));
+            A[i] = Integer.parseInt("" + str.charAt(i));
         }
 
         for (int i = 0; i < A.length - 1; i++) {

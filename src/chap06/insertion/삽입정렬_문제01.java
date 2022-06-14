@@ -30,7 +30,7 @@ public class 삽입정렬_문제01 {
         // 구간 합배열 생성
         int[] S = new int[N + 1];
 
-        for (int i = 1; i < N + 1; i++) {
+        for (int i = 1; i < S.length; i++) {
             S[i] = S[i - 1] + A[i - 1];
         }
 

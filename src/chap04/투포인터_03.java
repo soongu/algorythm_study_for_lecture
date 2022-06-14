@@ -31,7 +31,8 @@ public class 투포인터_03 {
 
             // 투포인터 알고리즘
             while (start < end) {
-                if (A[start] + A[end] == target) { // 두 수의 합으로 좋은 수가 나오는지 판단
+                long M = A[start] + A[end];
+                if (M == target) { // 두 수의 합으로 좋은 수가 나오는지 판단
                     if (start != i && end != i) { // target은 자기자신이 아닌 서로 다른 위치의 합인지 확인
                         result++; // 경우의 수 증가
                         break;
@@ -40,7 +41,7 @@ public class 투포인터_03 {
                     } else if (end == i) { // 끝포인터가 자기 자신을 가리킬 경우
                         end--; // 끝 포인터 한칸 이동
                     }
-                } else if (A[start] + A[end] < target) { // 두 수의 합이 판단타겟 수보다 작은 경우
+                } else if (M < target) { // 두 수의 합이 판단타겟 수보다 작은 경우
                     start++; // 판단타겟 수에 가까워지도록 시작포인터 이동
                 } else { // 두 수의 합이 판단타겟 수보다 큰 경우
                     end--; // 판단타겟 수에 가까워지도록 끝포인터 이동
