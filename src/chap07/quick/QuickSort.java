@@ -61,13 +61,13 @@ public class QuickSort {
              * end가 start보다 크면서, start의 요소가 pivot보다 큰 원소를
              * 찾을 떄 까지 start를 증가시킨다.
              */
-            while (a[++start] < pivot) ;
+            while (a[++start] < pivot);
 
             /*
              * end가 start보다 크면서, end의 요소가 pivot보다 작거나 같은 원소를
              * 찾을 떄 까지 end를 감소시킨다.
              */
-            while (start < end && a[--end] >= pivot) ;
+            while (start < end && a[--end] >= pivot);
 
 
             // 교환 될 두 요소를 찾았으면 두 요소를 바꾼다.

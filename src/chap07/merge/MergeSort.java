@@ -13,7 +13,6 @@ public class MergeSort {
     }
 
     private static void mergeSort(int[] arr, int s, int e) {
-
         if (e - s < 1) return; // 부분 리스트의 원소가 1개 이하면 return
 
         int m = (s + e) / 2; // 배열 중앙 위치

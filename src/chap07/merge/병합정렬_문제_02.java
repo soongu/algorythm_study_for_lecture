@@ -37,7 +37,7 @@ public class 병합정렬_문제_02 {
         int N = Integer.parseInt(br.readLine());
         int[] A = new int[N];
 
-        StringTokenizer st = new StringTokenizer(br.readLine());
+        StringTokenizer st = new StringTokenizer(br.readLine(), " ");
         for (int i = 0; i < N; i++) {
             A[i] = Integer.parseInt(st.nextToken());
         }
@@ -95,10 +95,6 @@ public class 병합정렬_문제_02 {
             arr[target++] = temp[p1++];
         }
 
-        /*
-            왼쪽 리스트가 먼저 소모된 경우, 오른쪽 리스트는 아직 데이터가 남아있기 때문에
-            마저 처리해준다.
-         */
         while (p2 <= e) {
             arr[target++] = temp[p2++];
         }

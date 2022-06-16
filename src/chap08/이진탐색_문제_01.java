@@ -10,7 +10,7 @@ import java.util.StringTokenizer;
 // 백준 1920번
 public class 이진탐색_문제_01 {
 
-    public static int binarySearch(int[] arr, int target) {
+    public static int binarySearch(long[] arr, long target) {
         int left = 0;
         int right = arr.length - 1;
         int mid;
@@ -37,11 +37,11 @@ public class 이진탐색_문제_01 {
 
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         int N = Integer.parseInt(br.readLine());
-        int[] A = new int[N];
+        long[] A = new long[N];
 
         StringTokenizer st = new StringTokenizer(br.readLine());
         for (int i = 0; i < N; i++) {
-            A[i] = Integer.parseInt(st.nextToken());
+            A[i] = Long.parseLong(st.nextToken());
         }
 
         Arrays.sort(A);
@@ -50,7 +50,7 @@ public class 이진탐색_문제_01 {
         st = new StringTokenizer(br.readLine());
 
         for (int i = 0; i < M; i++) {
-            int target = Integer.parseInt(st.nextToken());
+            long target = Long.parseLong(st.nextToken());
             if (binarySearch(A, target) != -1) {
                 System.out.println(1);
             } else {
