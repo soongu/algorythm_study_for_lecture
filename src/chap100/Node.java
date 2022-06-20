@@ -1,4 +1,4 @@
-package chap10;
+package chap100;
 
 public class Node {
 

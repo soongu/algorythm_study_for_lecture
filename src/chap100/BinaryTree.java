@@ -1,7 +1,6 @@
-package chap10;
+package chap100;
 
 
-import java.util.Comparator;
 import java.util.Stack;
 
 public class BinaryTree {
